@@ -1,8 +1,8 @@
 # Sparkify Data Warehouse
 
-This project is a data warehousing solution for Sparkify, a music streaming service. It uses Apache Spark to extract data from JSON logs and stores it in a star schema data model in Amazon Redshift. 
+This project is a data warehousing solution for Sparkify, a music streaming service. It uses python with botto3 (AWS SDK) to extract data from JSON logs and stores it in a star schema data model in Amazon Redshift. 
 
-The star schema design includes one fact table, songplays, and four dimension tables, users, songs, artists, and time. The fact table contains information about the songs that users listened to, while the dimension tables contain information about users, songs, artists, and timestamps.
+The star schema design includes one fact table, songplay, and four dimension tables, users, song, artist, and time. The fact table contains information about the songs that users listened to, while the dimension tables contain information about users, songs, artists, and timestamps.
 
 ## How to Use
 
