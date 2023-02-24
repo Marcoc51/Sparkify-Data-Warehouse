@@ -29,9 +29,9 @@ artist VARCHAR,
 auth VARCHAR,
 firstName VARCHAR,
 gender VARCHAR,
-itemInSession VARCHAR,
+itemInSession INTEGER,
 lastName VARCHAR,
-length VARCHAR,
+length DECIMAL(8),
 level VARCHAR,
 location VARCHAR,
 method VARCHAR,
@@ -63,7 +63,7 @@ year INTEGER
 
 songplay_table_create = ("""
 CREATE TABLE songplay(
-songplay_id INTEGER IDENTITY(0,1) NOT NULL, 
+songplay_id INTEGER IDENTITY(0,1) PRIMARY KEY NOT NULL, 
 start_time TIMESTAMP NOT NULL sortkey,
 user_id INTEGER NOT NULL, 
 level VARCHAR NOT NULL, 
@@ -77,7 +77,7 @@ user_agent VARCHAR
 
 user_table_create = ("""
 CREATE TABLE users(
-user_id INTEGER NOT NULL sortkey, 
+user_id INTEGER PRIMARY KEY NOT NULL sortkey, 
 first_name VARCHAR NOT NULL, 
 last_name VARCHAR NOT NULL, 
 gender VARCHAR NOT NULL, 
@@ -88,7 +88,7 @@ diststyle all;
 
 song_table_create = ("""
 CREATE TABLE song(
-song_id VARCHAR NOT NULL sortkey, 
+song_id VARCHAR PRIMARY KEY NOT NULL sortkey, 
 title VARCHAR NOT NULL, 
 artist_id VARCHAR NOT NULL, 
 year INTEGER, 
@@ -99,7 +99,7 @@ diststyle all;
 
 artist_table_create = ("""
 CREATE TABLE artist(
-artist_id VARCHAR NOT NULL sortkey, 
+artist_id VARCHAR PRIMARY KEY NOT NULL sortkey, 
 name VARCHAR NOT NULL, 
 location VARCHAR, 
 lattitude DECIMAL(8), 
@@ -110,7 +110,7 @@ diststyle all;
 
 time_table_create = ("""
 CREATE TABLE time(
-start_time TIMESTAMP NOT NULL sortkey, 
+start_time TIMESTAMP PRIMARY KEY NOT NULL sortkey, 
 hour INTEGER NOT NULL, 
 day INTEGER NOT NULL, 
 week INTEGER NOT NULL, 

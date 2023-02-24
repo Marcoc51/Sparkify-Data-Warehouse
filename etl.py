@@ -39,7 +39,7 @@ def insert_tables(cur, conn):
 
 
 def main():
-     """
+    """
     - Establishes a config instance to read the configuration file to connect to AWS redshift cluster.
     
     - Establishes connection with the sparkify database and gets cursor to it.  
